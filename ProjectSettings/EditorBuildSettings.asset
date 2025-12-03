@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/StartMenuScene.unity
+    guid: f1c57e3107955c14ab6a2675641fd73f
+  - enabled: 0
+    path: Assets/Scenes/MatchCreationScene.unity
+    guid: 98a7a12ced283134598c9419b93a1bfd
+  - enabled: 1
+    path: Assets/Scenes/MatchScene.unity
+    guid: fbfd83f34c24a2245a65b207995a7635
+  - enabled: 1
+    path: Assets/Scenes/SaveSlotsScene.unity
+    guid: e1deaee16b9bc194abdb52a5cffd2ed2
+  - enabled: 1
+    path: Assets/Scenes/StatisticsScene.unity
+    guid: fcac8ae503db5b7448b8911fab73f62a
+  m_configObjects: {}
