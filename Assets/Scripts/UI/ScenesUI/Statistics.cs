@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-[CreateAssetMenu(menuName = "GameConfig")]
-
 public class Statistics : MonoBehaviour
 {
     public Button backToMenuButton;

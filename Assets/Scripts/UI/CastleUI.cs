@@ -7,7 +7,6 @@ public class CastleUI : MonoBehaviour
 
     [Header("UI")]
     public GameObject panel;
-    public TMPro.TextMeshProUGUI hpText;
 
     private BuildingState currentCastle;
 
@@ -21,8 +20,6 @@ public class CastleUI : MonoBehaviour
     {
         currentCastle = castle;
         panel.SetActive(true);
-
-        hpText.text = $"Castle HP: {castle.hp}";
     }
 
     private void Spawn(UnitType type)
@@ -39,8 +36,6 @@ public class CastleUI : MonoBehaviour
 
         UnitState u = rules.CreateUnit(currentCastle.owner, currentCastle.id, type);
         gameController.CreateUnitView(u);
-
-        hpText.text = $"Castle HP: {currentCastle.hp}";
     }
 
     public void SpawnWarrior()  => Spawn(UnitType.Warrior);

@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour
     private readonly Dictionary<int, GameObject> buildingViews = new();
     private readonly Dictionary<Vector2Int, GameObject> goldViews = new();
     private readonly Dictionary<int, GameObject> healthBars = new();
+    private readonly Dictionary<int, GameObject> buildingHealthBars = new();
 
     private void Start()
     {
@@ -152,6 +153,16 @@ public class GameController : MonoBehaviour
         AutoScaleToTile(go, 1.7f);
 
         buildingViews[b.id] = go;
+        
+        if (healthBarPrefab != null)
+        {
+            GameObject bar = Instantiate(healthBarPrefab);
+            var hb = bar.GetComponent<HealthBar>();
+            hb.Init(go.transform, b.maxHp);
+            hb.SetHealth(b.hp);
+
+            buildingHealthBars[b.id] = bar;
+        }
     }
 
     private void SpawnGoldViews()
@@ -300,6 +311,19 @@ public class GameController : MonoBehaviour
                 go.transform.position = world;
             }
         }
+        
+        foreach (var b in gameState.buildings)
+        {
+            if (b.hp > 0 && buildingHealthBars.TryGetValue(b.id, out GameObject bar))
+                bar.GetComponent<HealthBar>().SetHealth(b.hp);
+
+            if (b.hp > 0 && buildingViews.TryGetValue(b.id, out GameObject go))
+            {
+                Vector3 world = mapGenerator.GridToWorldPosition(new Vector2Int(b.x, b.y));
+                world.z = -0.7f;
+                go.transform.position = world;
+            }
+        }
 
         RemoveDeadUnits();
         RemoveDestroyedBuildings();
@@ -338,6 +362,12 @@ public class GameController : MonoBehaviour
             {
                 Destroy(buildingViews[b.id]);
                 toRemove.Add(b.id);
+                
+                if (buildingHealthBars.ContainsKey(b.id))
+                {
+                    Destroy(buildingHealthBars[b.id]);
+                    buildingHealthBars.Remove(b.id);
+                }
             }
         }
 

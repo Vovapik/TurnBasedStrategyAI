@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2044231933732386767}
   - component: {fileID: 7482789323881852176}
   m_Layer: 12
-  m_Name: Warrior
+  m_Name: 1_Fort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c508c51b8e7b2724980b126d1e68fcdb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 528705d51e967994a831717764cd6b82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.04, y: 1.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

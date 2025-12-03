@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2044231933732386767}
   - component: {fileID: 7482789323881852176}
-  m_Layer: 12
-  m_Name: Warrior 5
+  m_Layer: 11
+  m_Name: 1_Cas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a53ce409b39680c4b9f9fda9699cde42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e18786f10873a6c4190aa5c32df7c791, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.08, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
